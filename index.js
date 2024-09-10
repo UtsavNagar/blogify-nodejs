@@ -19,7 +19,7 @@ app.use(cookieParser());
 app.use(checkForAuthenticationCokkie("token"));
 app.use("/user", userRoute);
 app.use("/blog", blogRoute);
-app.use(express.static(path.resolve("./public")));          // static serving of public enabled
+app.use(express.static(path.join(__dirname,"public")));          // static serving of public enabled
 
 mongodb.connect("mongodb://127.0.0.1:27017/blogify")
     .then(() => console.log(`mongodb Connected`))

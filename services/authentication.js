@@ -3,7 +3,7 @@ const { secreteKeyForJWT } = require("../credentials");
 
 function createTokenForUser(user) {
     const payload = {
-        fullName : user.fullName,
+        fullname : user.fullname,
         _id: user._id,
         email: user.email,
         profileImageURL: user.profileImageURL,

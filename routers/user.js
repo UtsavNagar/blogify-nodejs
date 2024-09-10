@@ -27,14 +27,13 @@ router.post("/signin", async (req,res) => {
 });
 
 router.post("/signup", async (req,res) => {
-    const {fullName , email , password} = req.body;
-
+    const {fullname , email , password} = req.body;
+    
     await User.create({
-        fullName,
+        fullname,
         email,
-        password
+        password,
     });
-
     return res.redirect("/");
 });
 
